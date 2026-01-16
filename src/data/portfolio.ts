@@ -39,8 +39,8 @@ export const portfolio = {
         "Benchmarked 50 concurrent users: 42 req/s, avg latency ~128ms (p95 < 180ms).",
         "Deployed: GitHub Pages (FE) + Railway (BE).",
       ],
-      live: "#",
-      repo: "#",
+      live: "https://ishan11032005github.github.io/EchoAI-frontend/",
+      repo: "https://github.com/Ishan11032005GitHub/EchoAI",
     },
     {
       name: "LeetPeek",
@@ -51,8 +51,8 @@ export const portfolio = {
         "Theme toggle + animated skeleton loaders + responsive components.",
         "Shareable profile cards for LinkedIn.",
       ],
-      live: "#",
-      repo: "#",
+      live: "https://leet-peek-xv67-git-main-ishan11032005vercels-projects.vercel.app/",
+      repo: "https://github.com/Ishan11032005GitHub/leet_peek",
     },
   ],
 
