@@ -10,7 +10,6 @@ export default function Hero() {
 
       <div className="mx-auto max-w-6xl px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-          {/* LEFT CONTENT */}
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -19,7 +18,7 @@ export default function Hero() {
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Hi, I'm{" "}
-                <span className="gradient-text glow-text">Ishan</span>
+                <span className="gradient-text glow-text">{portfolio.firstName}</span>
               </h1>
             </motion.div>
 
@@ -29,7 +28,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              I develop 3D visuals, user interfaces and web applications
+              {portfolio.tagline}
             </motion.p>
 
             <motion.p
@@ -38,8 +37,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              I build full-stack systems that don't just work — they ship with
-              clean UX, reliable APIs, and performance you can measure.
+              {portfolio.about}
             </motion.p>
 
             <motion.div
@@ -68,8 +66,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl">
-                👨‍💻
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-xl font-bold text-primary">
+                IT
               </div>
               <div className="text-sm">
                 <div className="text-foreground font-medium">
@@ -80,13 +78,27 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT - 3D SCENE */}
           <motion.div
+            className="relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <ThreeScene />
+            <div className="opacity-55">
+              <ThreeScene />
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+              <div className="relative rounded-[2rem] bg-gradient-to-br from-primary/80 via-accent/50 to-primary/20 p-[2px] shadow-2xl shadow-primary/25">
+                <img
+                  src="/ishan-profile.webp"
+                  alt={`${portfolio.name} portrait`}
+                  className="h-[330px] w-[245px] rounded-[calc(2rem-2px)] object-cover object-top md:h-[390px] md:w-[285px]"
+                />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-background/90 px-5 py-2 text-sm font-medium text-foreground shadow-lg backdrop-blur">
+                  {portfolio.name}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

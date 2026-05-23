@@ -18,7 +18,7 @@ const Index = () => {
 
       <footer className="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} {portfolio.name}. All rights reserved.
+          {"\u00A9"} {new Date().getFullYear()} {portfolio.name}. All rights reserved.
         </p>
       </footer>
     </main>

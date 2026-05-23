@@ -43,6 +43,9 @@ export default function Projects() {
             <h3 className="text-xl font-semibold text-foreground mb-3">
               {project.name}
             </h3>
+            <p className="text-primary text-sm font-medium mb-3">
+              {project.subtitle}
+            </p>
 
             <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
               {project.highlights[0]}

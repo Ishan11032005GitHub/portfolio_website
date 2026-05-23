@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { portfolio } from "@/data/portfolio";
 
 const navItems = [
   { label: "About", href: "#home" },
@@ -35,10 +36,10 @@ export default function Navbar() {
           className="flex items-center gap-2 font-semibold text-lg tracking-tight"
         >
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground text-sm font-bold">
-            I
+            {portfolio.firstName.charAt(0)}
           </div>
           <span>
-            Ishan <span className="text-muted-foreground">| Developer</span>
+            {portfolio.firstName} <span className="text-muted-foreground">| Developer</span>
           </span>
         </a>
 
