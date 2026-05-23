@@ -90,10 +90,7 @@ export default function Contact() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-10 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            Built with React + Three.js (React Three Fiber)
-          </p>
+        <div className="mt-10 pt-6 border-t border-border flex justify-end">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span className="text-sm text-muted-foreground">
