@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import ThreeScene from "./ThreeScene";
 import AnimatedWaves from "./AnimatedWaves";
 import { portfolio } from "@/data/portfolio";
 
@@ -79,24 +78,19 @@ export default function Hero() {
           </div>
 
           <motion.div
-            className="relative"
+            className="flex items-center justify-center p-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <div className="opacity-55">
-              <ThreeScene />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center p-8">
-              <div className="relative rounded-[2rem] bg-gradient-to-br from-primary/80 via-accent/50 to-primary/20 p-[2px] shadow-2xl shadow-primary/25">
-                <img
-                  src="/ishan-profile.webp"
-                  alt={`${portfolio.name} portrait`}
-                  className="h-[330px] w-[245px] rounded-[calc(2rem-2px)] object-cover object-top md:h-[390px] md:w-[285px]"
-                />
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-background/90 px-5 py-2 text-sm font-medium text-foreground shadow-lg backdrop-blur">
-                  {portfolio.name}
-                </div>
+            <div className="relative rounded-[2rem] bg-gradient-to-br from-primary/80 via-accent/50 to-primary/20 p-[2px] shadow-2xl shadow-primary/25">
+              <img
+                src="/ishan-profile.webp"
+                alt={`${portfolio.name} portrait`}
+                className="h-[330px] w-[245px] rounded-[calc(2rem-2px)] object-cover object-top md:h-[390px] md:w-[285px]"
+              />
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-border bg-background/90 px-5 py-2 text-sm font-medium text-foreground shadow-lg backdrop-blur">
+                {portfolio.name}
               </div>
             </div>
           </motion.div>
