@@ -15,7 +15,7 @@ export default function Section({ id, title, children }: SectionProps) {
           className="flex items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.35 }}
           transition={{ duration: 0.5 }}
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/25 bg-primary/10">
@@ -32,7 +32,7 @@ export default function Section({ id, title, children }: SectionProps) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           {children}

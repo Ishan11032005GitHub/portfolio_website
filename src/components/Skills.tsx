@@ -11,7 +11,7 @@ export default function Skills() {
           className="glass-hover rounded-3xl p-6 md:p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.5 }}
         >
           <div className="mb-8 flex items-center justify-between gap-4">
@@ -33,7 +33,7 @@ export default function Skills() {
                 className="rounded-2xl border border-border bg-background/40 p-4"
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 0.3, delay: catIndex * 0.1 }}
               >
                 <div className="mb-4 flex items-center gap-3 text-sm text-muted-foreground">
@@ -60,7 +60,7 @@ export default function Skills() {
           className="glass-hover rounded-3xl p-6 md:p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.25 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <div className="flex items-center gap-3 mb-6">
@@ -79,7 +79,7 @@ export default function Skills() {
                 className="flex items-start gap-3 rounded-2xl border border-border bg-secondary/40 p-4 transition-colors hover:bg-secondary"
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
               >
                 <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-gradient-to-br from-primary to-accent" />

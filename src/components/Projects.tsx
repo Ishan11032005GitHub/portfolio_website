@@ -13,7 +13,7 @@ export default function Projects() {
             className="glass-hover flex flex-col rounded-3xl p-5 md:p-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.25 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="mb-5 flex items-start justify-between gap-4">

@@ -13,7 +13,7 @@ export default function Experience() {
             className="glass-hover scanline relative rounded-3xl p-6 md:ml-16 md:p-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.25 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="absolute -left-[3.15rem] top-8 hidden h-5 w-5 rounded-full border border-primary/50 bg-background shadow-[0_0_24px_hsla(193,88%,60%,0.35)] md:block">
@@ -44,7 +44,7 @@ export default function Experience() {
                   className="flex items-start gap-3 rounded-2xl border border-border/70 bg-background/30 p-4 text-foreground/80"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.25 }}
                   transition={{ duration: 0.3, delay: 0.3 + bulletIndex * 0.1 }}
                 >
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />

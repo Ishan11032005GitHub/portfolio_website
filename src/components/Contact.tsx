@@ -10,7 +10,7 @@ export default function Contact() {
         className="glass-hover scanline rounded-3xl p-6 md:p-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false, amount: 0.25 }}
         transition={{ duration: 0.5 }}
       >
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
