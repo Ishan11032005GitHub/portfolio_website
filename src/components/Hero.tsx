@@ -9,10 +9,10 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl px-4">
         <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
           {[
-            ["System Status", "Online"],
-            ["Infrastructure Health", "Stable"],
-            ["Active Deployments", portfolio.projects.length.toString()],
-            ["Services Online", portfolio.skills["Backend & APIs"].length.toString()],
+            ["Profile", portfolio.name],
+            ["Location", portfolio.location],
+            ["Project Systems", portfolio.projects.length.toString()],
+            ["Skill Groups", Object.keys(portfolio.skills).length.toString()],
           ].map(([label, value], index) => (
             <motion.div
               key={label}
