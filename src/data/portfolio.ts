@@ -17,6 +17,18 @@ export const portfolio = {
 
   experience: [
     {
+      company: "Stealth Startup",
+      role: "AI & Backend Engineering Intern",
+      period: "Jun 2026 - Present | Remote",
+      bullets: [
+        "Working with the founding team to build an AI-powered emotional wellness platform, expanding the existing product across backend systems, AI infrastructure, authentication, and user workflows.",
+        "Engineered the AI companion backend using Node.js, Express.js, TypeScript, Supabase, Drizzle ORM, and Gemini 2.5 Flash, delivering persistent conversational experiences with secure session management.",
+        "Built 15+ backend APIs for AI chat, journals, memory, daily wellness tracking, onboarding, listeners, circles, and profile services while integrating authenticated frontend-backend communication.",
+        "Designed scalable data persistence, migration workflows, encrypted AI chat storage, guest continuity, and resilient backend architecture with graceful degradation during infrastructure failures.",
+        "Improved platform reliability by integrating AI safety checks, crisis detection, dashboard functionality, authentication flows, search, notifications, and production-ready full-stack integrations for the MVP launch.",
+      ],
+    },
+    {
       company: "Carrier",
       role: "Tech Intern - Full Stack Developer",
       period: "Dec 2025 - Jan 2026 | Remote",
@@ -59,6 +71,51 @@ export const portfolio = {
       live: "https://insight-flow-flame-three.vercel.app/",
       repo: "https://github.com/Ishan11032005GitHub/InsightFlow",
     },
+    {
+      name: "DealFlow",
+      subtitle: "VC Deal Intake and Review System",
+      stack: ["React.js", "Node.js", "Express.js", "REST APIs", "SQLite", "API Integration", "JWT", "Gemini API"],
+      highlights: [
+        "Built a VC deal intake and review system with public submissions, secure admin workflows, status tracking, and AI-generated pitch summaries.",
+        "Built public submission flows and authenticated admin review with status tracking and internal notes.",
+        "Designed JWT-secured REST APIs with rate limiting, handling 30+ concurrent requests reliably.",
+        "Integrated the Gemini API to auto-generate structured pitch summaries, reducing manual review effort by ~40%.",
+        "Validated performance under sustained load, achieving p95 latency below 1.6s.",
+      ],
+    },
+    {
+      name: "EchoAI",
+      subtitle: "End-to-End AI Assistant Platform",
+      stack: ["HTML", "CSS", "JavaScript", "REST APIs", "Node.js", "Express.js", "MongoDB", "API Integration"],
+      highlights: [
+        "Built an end-to-end AI assistant platform combining secure user flows, asynchronous AI services, and measurable performance at scale.",
+        "Integrated chatbot and image generation services with async request handling, improving response time by ~35-40%.",
+        "Benchmarked 50 concurrent users at 42 requests per second with ~128ms average latency and p95 below 180ms.",
+        "Deployed the frontend on GitHub Pages and the backend on Railway.",
+      ],
+    },
+    {
+      name: "TweetMood",
+      subtitle: "Real-Time NLP Sentiment Analyzer",
+      stack: ["Python", "Machine Learning", "scikit-learn", "NLP", "NLTK", "Streamlit Cloud"],
+      highlights: [
+        "Built a real-time NLP system that turns live text into actionable sentiment signals with optimized inference and proven concurrent-load performance.",
+        "Built and deployed a web app for real-time sentiment prediction using a Logistic Regression model trained on 1.6M tweets, achieving 82% accuracy.",
+        "Benchmarked 50 concurrent users over 30s with 69 requests per second, 0% failures, ~416ms average latency, and p95 below 470ms.",
+        "Optimized the model inference pipeline for faster response times and deployed via Streamlit Cloud.",
+      ],
+    },
+    {
+      name: "LeetPeek",
+      subtitle: "Interactive LeetCode Analytics Dashboard",
+      stack: ["React.js", "Application Programming Interfaces (API)", "Chart.js", "Recharts", "Next.js"],
+      highlights: [
+        "Built an interactive LeetCode dashboard with problem breakdowns, submission heatmaps, contest graphs, and analytics.",
+        "Added dual-user comparison with bar-graph benchmarking.",
+        "Implemented theme toggle, animated skeleton loaders, and responsive components.",
+        "Created shareable profile cards optimized for LinkedIn.",
+      ],
+    },
   ],
 
   skills: {
@@ -67,8 +124,8 @@ export const portfolio = {
     "Web & Frontend": ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "TypeScript", "Next.js", "Tailwind CSS"],
     "Backend & APIs": ["FastAPI", "Node.js", "Express.js", "RESTful APIs"],
     "ML / AI / NLP": ["NumPy", "Pandas", "scikit-learn", "NLTK", "PyTorch", "Feature Engineering", "LangChain", "LangGraph", "Google ADK"],
-    Systems: ["Authentication", "RBAC", "Workflow Orchestration", "State Management", "API Integration"],
-    Databases: ["MySQL", "MongoDB", "DynamoDB", "SQLite"],
+    Systems: ["Authentication", "RBAC", "Workflow Orchestration", "State Management", "API Integration", "AI Memory/Continuity", "Safety & Crisis Detection"],
+    Databases: ["MySQL", "MongoDB", "DynamoDB", "SQLite", "Supabase"],
     "Cloud & Tools": ["AWS (EC2, S3, DynamoDB)", "Git", "GitHub", "Jupyter Notebook"],
   },
 

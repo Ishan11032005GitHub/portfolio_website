@@ -23,32 +23,32 @@ export default function Navbar() {
     <motion.header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+          ? "border-b border-border bg-background/86 backdrop-blur-xl"
+          : "bg-background/30 backdrop-blur-sm"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a
           href="#home"
-          className="flex items-center gap-2 font-semibold text-lg tracking-tight"
+          className="group flex items-center gap-3 font-semibold tracking-tight"
         >
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground text-sm font-bold">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-sm font-bold text-primary transition-colors group-hover:border-primary/60">
             {portfolio.firstName.charAt(0)}
           </div>
-          <span>
+          <span className="text-sm md:text-base">
             {portfolio.firstName} <span className="text-muted-foreground">| Developer</span>
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+        <nav className="mission-panel hidden items-center gap-1 rounded-full px-2 py-1 text-sm text-muted-foreground md:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="hover:text-foreground transition-colors duration-200"
+              className="rounded-full px-4 py-2 transition-colors duration-200 hover:bg-secondary hover:text-foreground"
             >
               {item.label}
             </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="rounded-full border border-border px-5 py-2 text-sm text-foreground hover:bg-secondary hover:border-primary/50 transition-all duration-300"
+          className="rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm text-foreground transition-all duration-300 hover:border-primary/60 hover:bg-primary/15"
         >
           Let's talk
         </a>

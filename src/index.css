@@ -4,42 +4,46 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 220 36% 5%;
+    --foreground: 210 30% 96%;
 
-    --card: 240 6% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 25% 8%;
+    --card-foreground: 210 30% 96%;
 
-    --popover: 240 6% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 30% 96%;
 
-    --primary: 250 89% 67%;
+    --primary: 193 88% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 218 22% 13%;
+    --secondary-foreground: 210 30% 96%;
 
-    --muted: 240 5% 18%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 218 18% 16%;
+    --muted-foreground: 213 13% 64%;
 
-    --accent: 250 89% 67%;
+    --accent: 155 72% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 4% 20%;
-    --input: 240 4% 20%;
-    --ring: 250 89% 67%;
+    --border: 216 20% 18%;
+    --input: 216 20% 18%;
+    --ring: 193 88% 60%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
     /* Custom portfolio tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(250, 89%, 67%) 0%, hsl(280, 80%, 55%) 50%, hsl(320, 75%, 50%) 100%);
-    --gradient-glow: linear-gradient(135deg, hsl(250, 89%, 67%) 0%, hsl(200, 90%, 60%) 100%);
-    --glass-bg: hsla(240, 6%, 10%, 0.6);
-    --glass-border: hsla(240, 5%, 30%, 0.4);
-    --wave-color: hsl(250, 89%, 67%);
+    --gradient-primary: linear-gradient(135deg, hsl(193, 88%, 60%) 0%, hsl(155, 72%, 55%) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(193, 88%, 60%) 0%, hsl(155, 72%, 55%) 100%);
+    --panel-bg: hsla(220, 25%, 8%, 0.84);
+    --panel-border: hsla(210, 22%, 30%, 0.64);
+    --trace: hsla(193, 88%, 60%, 0.24);
+    --trace-strong: hsla(155, 72%, 55%, 0.5);
+    --glass-bg: var(--panel-bg);
+    --glass-border: var(--panel-border);
+    --wave-color: hsl(193, 88%, 60%);
   }
 }
 
@@ -55,6 +59,10 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background:
+      radial-gradient(circle at 20% 0%, hsla(193, 88%, 60%, 0.14), transparent 28rem),
+      radial-gradient(circle at 82% 12%, hsla(155, 72%, 55%, 0.08), transparent 24rem),
+      hsl(var(--background));
   }
 
   ::selection {
@@ -64,10 +72,15 @@
 
 @layer components {
   .glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, hsla(220, 25%, 10%, 0.94), hsla(220, 25%, 7%, 0.92)),
+      var(--panel-bg);
+    backdrop-filter: blur(18px);
+    border: 1px solid var(--panel-border);
     border-radius: var(--radius);
+    box-shadow: inset 0 1px 0 hsla(210, 30%, 96%, 0.05), 0 18px 60px hsla(220, 45%, 2%, 0.35);
   }
 
   .glass-hover {
@@ -75,9 +88,8 @@
   }
 
   .glass-hover:hover {
-    background: hsla(240, 6%, 12%, 0.7);
-    border-color: hsla(250, 89%, 67%, 0.3);
-    box-shadow: 0 8px 32px hsla(250, 89%, 67%, 0.15);
+    border-color: hsla(193, 88%, 60%, 0.42);
+    box-shadow: inset 0 1px 0 hsla(210, 30%, 96%, 0.07), 0 24px 70px hsla(193, 88%, 6%, 0.28);
   }
 
   .gradient-text {
@@ -88,21 +100,72 @@
   }
 
   .grid-bg {
-    background-image: radial-gradient(
-      circle at 1px 1px,
-      hsla(240, 5%, 40%, 0.15) 1px,
-      transparent 0
-    );
-    background-size: 32px 32px;
+    background-image:
+      linear-gradient(hsla(193, 88%, 60%, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(193, 88%, 60%, 0.05) 1px, transparent 1px),
+      radial-gradient(circle at 1px 1px, hsla(155, 72%, 55%, 0.08) 1px, transparent 0);
+    background-size: 64px 64px, 64px 64px, 24px 24px;
   }
 
   .glow {
-    box-shadow: 0 0 40px hsla(250, 89%, 67%, 0.3), 
-                0 0 80px hsla(250, 89%, 67%, 0.15);
+    box-shadow: 0 0 40px hsla(193, 88%, 60%, 0.2),
+                0 0 80px hsla(155, 72%, 55%, 0.09);
   }
 
   .glow-text {
-    text-shadow: 0 0 30px hsla(250, 89%, 67%, 0.5);
+    text-shadow: 0 0 30px hsla(193, 88%, 60%, 0.35);
+  }
+
+  .mission-panel {
+    @apply glass rounded-2xl;
+  }
+
+  .mission-label {
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground;
+  }
+
+  .status-dot {
+    @apply inline-flex h-2 w-2 rounded-full bg-accent;
+    box-shadow: 0 0 0 4px hsla(155, 72%, 55%, 0.12), 0 0 16px hsla(155, 72%, 55%, 0.5);
+  }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, hsla(193, 88%, 60%, 0.12), transparent);
+    transform: translateX(-120%);
+    animation: scan 7s ease-in-out infinite;
+  }
+
+  .circuit-bg {
+    background-image:
+      linear-gradient(90deg, var(--trace) 1px, transparent 1px),
+      linear-gradient(var(--trace) 1px, transparent 1px),
+      linear-gradient(135deg, transparent 47%, hsla(155, 72%, 55%, 0.08) 48%, hsla(155, 72%, 55%, 0.08) 52%, transparent 53%);
+    background-size: 44px 44px, 44px 44px, 120px 120px;
+  }
+
+  .telemetry-bar {
+    position: relative;
+    overflow: hidden;
+    background: hsla(218, 22%, 13%, 0.75);
+  }
+
+  .telemetry-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 46%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+    animation: telemetry 4.5s ease-in-out infinite;
   }
 }
 
@@ -149,6 +212,26 @@
     }
     50% {
       opacity: 0.8;
+    }
+  }
+
+  @keyframes scan {
+    0%, 24% {
+      transform: translateX(-120%);
+    }
+    48%, 100% {
+      transform: translateX(120%);
+    }
+  }
+
+  @keyframes telemetry {
+    0%, 100% {
+      transform: translateX(-8%);
+      opacity: 0.55;
+    }
+    50% {
+      transform: translateX(125%);
+      opacity: 0.9;
     }
   }
 }
